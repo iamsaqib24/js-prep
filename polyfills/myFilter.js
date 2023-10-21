@@ -16,5 +16,5 @@ console.log("Output using myFilter method:", newArray);
 
 console.log(
   "Output using default Filter method:",
-  array.myFilter((item) => item > 2)
+  array.filter((item) => item > 2)
 );

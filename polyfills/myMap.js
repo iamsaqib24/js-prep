@@ -12,9 +12,6 @@ Array.prototype.myMap = function (callback) {
   return output;
 };
 
-const newArray = array.myMap(multiplyBy2);
-console.log(newArray);
-
 console.log(
   "Using myMap method:",
   array.myMap((item) => item * 3)
