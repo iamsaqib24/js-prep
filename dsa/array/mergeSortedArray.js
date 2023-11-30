@@ -25,11 +25,14 @@ function mergeSortedArray(arr1, m, arr2, n) {
       j++;
     }
   }
+  // when arr1 is exhausted
   while (j < n) {
     result[k] = arr2[j];
     k++;
     j++;
   }
+
+  // when arr2 is exhausted
   while (i < m) {
     result[k] = arr1[i];
     k++;
