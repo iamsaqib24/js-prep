@@ -1,24 +1,19 @@
-// Reverse an array,
-const ahmedArray = [5, 9, 6, 8, 1, 2, 3, 7]; // array declare
+let arr = [30, 7, 6, 5, 10, 98];
 
-let initial = 0; // first index of the array
-let last = ahmedArray.length - 1; // last index of the array
+function reverse(arr) {
+  let start = 0;
+  let end = arr.length - 1;
 
-// custom swap function -> It's my logic for swapping,
-function mySwap(initialIndex, ahmedArray, lastIndex) {
-  let temp; // undefined
-  // console.log(temp);
-  temp = ahmedArray[initial]; // undefined = 5
-  ahmedArray[initial] = ahmedArray[last]; // 5 = 3
-  ahmedArray[last] = temp; // 3 = 5
-  // console.log(ahmedArray[initial]);
-  // console.log(ahmedArray[last]);
+  while (start < end) {
+    let temp = arr[start];
+    arr[start] = arr[end];
+    arr[end] = temp;
+
+    start++;
+    end--;
+  }
+
+  return arr;
 }
 
-while (initial <= last) {
-  mySwap(initial, ahmedArray, last); // function invocation or calling
-  initial = initial + 1;
-  last = last - 1;
-}
-
-console.log(ahmedArray);
+console.log(reverse(arr));
